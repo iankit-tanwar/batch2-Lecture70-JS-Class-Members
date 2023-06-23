@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>batch2 Lecture70 JS Class Members</title>
+</head>
+
+<body>
+
+    <script>
+
+        //Global variable
+        let x = 10;
+
+        var z = 50;
+
+        class MyClass {
+            //1 Member
+            //Property are variable declare inside the class
+            y = 20;
+            a = 70;
+
+
+            //2 Member
+
+
+            //3 Method defination
+            myFunction1() {
+                //Method Body
+                console.log("hello")
+            }
+
+            addNumbers() {
+                // this belongs to current class object
+                console.log(x + this.y);
+                console.log(this.addNumbers2());
+
+            }
+            addNumbers2() {
+
+                // console.log((a+this.z));
+                return z + this.a;
+            }
+        }
+        /* let object = new ClassNamw();
+            object.method()  // . member selection operator
+        */
+
+        let obj = new MyClass();
+        obj.myFunction1();
+        obj.addNumbers();
+
+
+
+
+
+    </script>
+
+    <script>
+
+        class MyClassA {
+            //property / variable
+
+            a = 50;
+
+            // 2 
+
+
+            //3 methods
+
+        }
+
+        class MyClassB extends MyClassA {
+            //property / variable
+
+            b = 100;
+            // 2 
+
+            //3 methods
+
+            addNum() {
+                console.log()
+            }
+        }
+
+        let objb = new MyClassB();
+        console.log(objb.a + objb.b);
+    </script>
+
+
+
+    <script>
+        class MyInfo {
+
+            //1 property / variable
+            name = "Ankit";
+            surname = "Tanwar"
+            age;
+
+
+            //2 Constructor Method
+            // constuctor is a especial method to used initilaize the property 
+            constructor() {
+                this.age = 22;
+
+            }
+
+
+            //3 methods/function
+            greet() {
+                console.log(this.name+' '+this.surname+' '+this.age+' '+"years old")
+            }
+
+        }
+
+        // the constructor called immediately when you call constructor
+
+        let objj = new MyInfo();
+        objj.greet()
+
+
+    </script>
+
+</body>
+
+</html>
